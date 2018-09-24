@@ -1,16 +1,31 @@
 <?php
 
-// Initialize router
-$router = new Router;
-
 // Welcome page
-$router->get('/', function() {
+Router::get('/', function() {
 	require APPROOT . '/views/welcome.php';
 });
 
-$router->get('/users', 'UsersController@index');
+Router::get('/page', function() {
+	require APPROOT . '/views/page.php';
+});
 
-$router->get('/about', 'UsersController@about');
+Router::get('/about', 'UsersController@about');
+
+Router::post('/about', 'UsersController@create');
+
+
+/**
+ * Set the page to load if the requested URI does not exist
+ * Has to be called at the end of the file, after all other routes
+ */
+Router::setErrorPage('views/error/url');
+
+
+
+
+
+
+
 
 
 

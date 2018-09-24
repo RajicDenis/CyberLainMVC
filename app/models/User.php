@@ -43,4 +43,18 @@ class User {
 		return $data;
 	}
 
+	public function addUser($data) {
+
+		$query = 'INSERT INTO users (name, email) VALUES (:name, :email)';
+
+		$stmt = $this->conn->prepare($query);
+		$stmt->bindValue(':name', $data['name']);
+		$stmt->bindValue(':email', $data['email']);
+
+		$stmt->execute();
+
+		return 'User created!';
+
+	}
+
 }
