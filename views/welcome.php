@@ -1,7 +1,8 @@
 <h1>Welcome to CyberLainMVC!!</h1>
 
-<?php echo $data['message']; ?>
-
+<pre>
+<?php print_r($data); ?>
+</pre>
 <form action="/about" method="POST">
 	<input type="text" name="name" placeholder="Name">
 	<input type="text" name="email" placeholder="Email">

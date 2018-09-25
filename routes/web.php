@@ -1,9 +1,7 @@
 <?php
 
 // Welcome page
-Router::get('/', function() {
-	require APPROOT . '/views/welcome.php';
-});
+Router::get('/', 'UsersController@index');
 
 Router::get('/page', function() {
 	require APPROOT . '/views/page.php';
@@ -17,6 +15,7 @@ Router::post('/about', 'UsersController@create');
 /**
  * Set the page to load if the requested URI does not exist
  * Has to be called at the end of the file, after all other routes
+ * Path is defined without '.php' extension
  */
 Router::setErrorPage('views/error/url');
 

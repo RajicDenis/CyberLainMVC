@@ -5,7 +5,7 @@ class UsersController extends Controller {
 	public $model;
 
 	/**
-	 * Initialize model
+	 * Instantiate model
 	 */
 	public function __construct() {
 
@@ -13,7 +13,6 @@ class UsersController extends Controller {
 
 	}
 
-	
 	public function index() {
 
 		$users = $this->model->getAllUsers();

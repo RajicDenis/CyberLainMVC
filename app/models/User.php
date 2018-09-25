@@ -1,53 +1,37 @@
 <?php
 
-class User {
+require_once 'Model.php';
 
-	public $name;
-	public $email;
+class User extends Model {
 
+	protected $table = 'users';
+	protected $name;
+	protected $email;
 
-	public $conn;
+	protected $db;
 
 	public function __construct() {
 
-		$db = new Database;
-		$this->conn = $db->connect();
+		$database = new Database;
+		$this->db = $database->connect();
 
-		return $this->conn;
+		return $this->db;
 
 	}
 
 	public function getAllUsers() {
 
-		$query = 'SELECT * FROM users';
+		$user = $this->pluck(['name', 'email']);
 
-		$stmt = $this->conn->prepare($query);
+		return $user;
 
-		$stmt->execute();
-
-		$data = [];
-
-		while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-			extract($row);
-
-			$item_array = [
-				'name' => $name,
-				'email' => $email
-			];
-
-			array_push($data, $item_array);
-
-		}
-
-		return $data;
 	}
 
 	public function addUser($data) {
 
 		$query = 'INSERT INTO users (name, email) VALUES (:name, :email)';
 
-		$stmt = $this->conn->prepare($query);
+		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':name', $data['name']);
 		$stmt->bindValue(':email', $data['email']);
 

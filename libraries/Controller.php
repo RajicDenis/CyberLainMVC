@@ -27,7 +27,7 @@ class Controller {
 
 		} else {
 
-			echo 'View dnot found!!';
+			echo 'View not found!!';
 
 		}
 
