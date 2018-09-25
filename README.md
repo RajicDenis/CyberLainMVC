@@ -4,31 +4,31 @@
 =============================================================== 
 
 ## CONFIG FILE
-
+===============================================================
 ###### Edit the config file to setup the database connection
-		- Go to config/Config.php
-		- Define the DB constants to match your database name, user and password
+- Go to config/Config.php
+- Define the DB constants to match your database name, user and password
 
 
 ## ROUTES	
 ===============================================================  
 ###### Defining routes:
-	- Go to routes/web.php
-	- A default route to the welcome page is already defined
-	- The setErrorPage() function needs to be defined at the end of the file (after all other routes)
-		-- Sets the view to load if the requested route is not defined
-	- There are two ways of defining routes:
-		-- ANONYMOUS FUNCTION
+- Go to routes/web.php
+- A default route to the welcome page is already defined
+- The setErrorPage() function needs to be defined at the end of the file (after all other routes)
+	-- Sets the view to load if the requested route is not defined
+- There are two ways of defining routes:
+	-- ANONYMOUS FUNCTION
 ```
-		Route::get('/home', function() {
-			require APPROOT .'views/welcome.php';
-		});
+	Route::get('/home', function() {
+		require APPROOT .'views/welcome.php';
+	});
 ```
-		-- CONTROLLER METHOD
+	-- CONTROLLER METHOD
 ```
-		Route::get('/home', 'PageController@index');
+	Route::get('/home', 'PageController@index');
 ```
-		--- index is a method defined inside the controller
+	--- index is a method defined inside the controller
 
 
 ## MODEL
@@ -52,30 +52,30 @@ public function __construct() {
 
 
 ## CONTROLLER
-	===============================================================  
-	- Create controllers inside app/controllers directory
-	- Default UserController is already created
-	- Every controller needs to extend Controller to use the ->model() and ->view() methods
-	- To use the model and its methods inside the controller, you can require and instantiate
-	  the model using a construct method:
+===============================================================  
+- Create controllers inside app/controllers directory
+- Default UserController is already created
+- Every controller needs to extend Controller to use the ->model() and ->view() methods
+- To use the model and its methods inside the controller, you can require and instantiate
+  the model using a construct method:
 
 ```
-	  	public function __construct() {
+  	public function __construct() {
 
-			$this->model = $this->model('User');
+		$this->model = $this->model('User');
 
-		}
+	}
 ```
-	- Inside $this->model() pass the model name (in this example 'User')
-	- To use methods defined in the model, simply use $this->model->method() (e.g. $this->model->getAllUsers())
-	- If you don't want to use $this->model, you can use the alternative method:
+- Inside $this->model() pass the model name (in this example 'User')
+- To use methods defined in the model, simply use $this->model->method() (e.g. $this->model->getAllUsers())
+- If you don't want to use $this->model, you can use the alternative method:
 ```
-		$user = new User;
-		$user->getAllUsers();
+	$user = new User;
+	$user->getAllUsers();
 ```
 
 ## ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
-	===============================================================  
+===============================================================  
 ###### First method
 
 ```
@@ -90,7 +90,7 @@ public function __construct() {
 
 
 ## ACCESSING DATABASE
-	===============================================================  
+===============================================================  
 ###### Define function to get or manipulate data inside model
 
 ```
@@ -131,20 +131,20 @@ public function __construct() {
 ```
 
 ## SIMPLE QUERY BUILDER
-	===============================================================  
+===============================================================  
 ###### Conditions 
-		- You have to define protected $table = <table name> inside the model where you want to use the query builder
-		- You have to extend the Model class (e.g. class User extends Model {})
+	- You have to define protected $table = <table name> inside the model where you want to use the query builder
+	- You have to extend the Model class (e.g. class User extends Model {})
 
 ###### Currently available methods
 
 	```
-		- where()
-		- orderBy()
-		- find()
-		- pluck()
-		- get()
-		- first()
+	- where()
+	- orderBy()
+	- find()
+	- pluck()
+	- get()
+	- first()
 	```
 
 	
