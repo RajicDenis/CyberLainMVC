@@ -1,18 +1,18 @@
 # **CyberLainMVC**
 =============================================================== 
-###### **Custom lightweight PHP MVC framework**
+### **Custom lightweight PHP MVC framework**
 =============================================================== 
 
-## CONFIG FILE
+### CONFIG FILE
 ===============================================================
-###### Edit the config file to setup the database connection
+#### Edit the config file to setup the database connection
 - Go to config/Config.php
 - Define the DB constants to match your database name, user and password
 
 
-## ROUTES	
+### ROUTES	
 ===============================================================  
-###### Defining routes:
+#### Defining routes:
 - Go to routes/web.php
 - A default route to the welcome page is already defined
 - The setErrorPage() function needs to be defined at the end of the file (after all other routes)  
@@ -30,7 +30,7 @@
 	Route::get('/home', 'PageController@index');
 ```
 
-## MODEL
+### MODEL
 ===============================================================  
 - Create models inside the app/models directory
 - A default User model is already created 
@@ -50,7 +50,7 @@ public function __construct() {
 - To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
-## CONTROLLER
+### CONTROLLER
 ===============================================================  
 - Create controllers inside app/controllers directory
 - Default UserController is already created
@@ -73,14 +73,14 @@ public function __construct() {
 	$user->getAllUsers();
 ```
 
-## ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
+### ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
 ===============================================================  
-###### First method
+#### First method
 
 ```
 	$users = $this->model->getAllUsers();
 ```
-###### Second method
+#### Second method
 
 ```
 	$user = new User;
@@ -88,9 +88,9 @@ public function __construct() {
 ```
 
 
-## ACCESSING DATABASE
+### ACCESSING DATABASE
 ===============================================================  
-###### Define function to get or manipulate data inside model
+#### Define function to get or manipulate data inside model
 
 ```
 	class User {
@@ -116,7 +116,7 @@ public function __construct() {
 		}
 	}
 ```
-###### From Controller, call model method to manipulate database, then pass data to view
+#### From Controller, call model method to manipulate database, then pass data to view
 ```
 	class UsersController {
 
@@ -129,13 +129,13 @@ public function __construct() {
 	} 
 ```
 
-## SIMPLE QUERY BUILDER
+### SIMPLE QUERY BUILDER
 ===============================================================  
-###### Conditions 
+#### Conditions 
 	- You have to define protected $table = <table name> inside the model where you want to use the query builder
 	- You have to extend the Model class (e.g. class User extends Model {})
 
-###### Currently available methods
+#### Currently available methods
 
 	```
 	- where()
