@@ -1,6 +1,6 @@
-# CyberLainMVC
+# **CyberLainMVC**
 =============================================================== 
-###### Custom lightweight PHP MVC framework
+###### **Custom lightweight PHP MVC framework**
 =============================================================== 
 
 ## CONFIG FILE
@@ -17,14 +17,14 @@
 - A default route to the welcome page is already defined
 - The setErrorPage() function needs to be defined at the end of the file (after all other routes)
 	-- Sets the view to load if the requested route is not defined
-- There are two ways of defining routes:
-	-- ANONYMOUS FUNCTION
+- There are two ways of defining routes:  
+	**ANONYMOUS FUNCTION**
 ```
 	Route::get('/home', function() {
 		require APPROOT .'views/welcome.php';
 	});
 ```
-	-- CONTROLLER METHOD
+	**CONTROLLER METHOD**
 ```
 	Route::get('/home', 'PageController@index');
 ```
