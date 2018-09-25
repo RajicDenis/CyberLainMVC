@@ -21,7 +21,7 @@ class User extends Model {
 
 	public function getAllUsers() {
 
-		$user = $this->pluck(['name', 'email']);
+		$user = $this->orderBy('id', 'desc')->get();
 
 		return $user;
 

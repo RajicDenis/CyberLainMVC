@@ -1,15 +1,15 @@
 <?php
 
 // Welcome page
-Router::get('/', 'UsersController@index');
+Router::get('/', 'UserController@index');
 
 Router::get('/page', function() {
 	require APPROOT . '/views/page.php';
 });
 
-Router::get('/about', 'UsersController@about');
+Router::get('/about', 'UserController@about');
 
-Router::post('/about', 'UsersController@create');
+Router::post('/about', 'UserController@create');
 
 
 /**

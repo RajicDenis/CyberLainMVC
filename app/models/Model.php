@@ -3,7 +3,10 @@
 class Model {
 
 	protected $db;
+
 	private $stmt;
+	private $query;
+	private $whereValue;
 
 	/**
 	 * Connet to database
@@ -12,6 +15,40 @@ class Model {
 
 		$database = new Database;
 		$this->db = $database->connect();
+
+	}
+
+	/**
+	 * Ads condition to query, can be chained
+	 * @param string $column column name
+	 * @param string|int|bool $value
+	 */
+	public function where($column, $value) {
+
+		$this->query = 'SELECT * FROM '. $this->table . ' WHERE '. $column .' = :value';
+		$this->whereValue = $value;
+
+		return $this;
+
+	}
+
+	/**
+	 * Ads condition to query, can be chained
+	 * @param string $column column name
+	 * @param string $order 'desc' or 'asc'
+	 */
+	public function orderBy($column, $order) {
+
+		if($this->query != null) {
+
+			$this->query = $this->query . ' ORDER BY '. $column .' '. $order .'';
+
+		} else {
+
+			$this->query = 'SELECT * FROM '. $this->table .' ORDER BY '. $column .' '. $order .'';
+		}
+		
+		return $this;
 
 	}
 
@@ -40,31 +77,6 @@ class Model {
 	}
 
 	/**
-	 * Ads condition to query, can be chained
-	 * @param string $column column name
-	 * @param string|int|bool $value
-	 */
-	public function where($column, $value) {
-
-		$query = 'SELECT * FROM '. $this->table . ' WHERE '. $column .' = :value';
-
-		try {
-
-			$stmt = $this->db->prepare($query);
-			$stmt->bindValue(':value', $value);
-			$stmt->execute();
-
-			$this->stmt = $stmt;
-
-			return $this;
-
-		} catch(PDOException $e) {
-			echo $e->getMessage();
-		}
-
-	}
-
-	/**
 	 * Get specified column or columns from database table
 	 * @param string|array $column column names
 	 */
@@ -72,9 +84,13 @@ class Model {
 
 		try {
 
-			if($this->stmt != null) {
+			if($this->query != null) {
 
-				$data = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+				$stmt = $this->db->prepare($this->query);
+				$stmt->bindValue(':value', $this->whereValue);
+				$stmt->execute();
+
+				$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 				$dataArray = [];
 				$itemArray = [];
@@ -135,7 +151,11 @@ class Model {
 
 		try {
 
-			$result = $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+			$stmt = $this->db->prepare($this->query);
+			$stmt->bindValue(':value', $this->whereValue);
+			$stmt->execute();
+
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 			return $result;
 
@@ -152,7 +172,11 @@ class Model {
 
 		try {
 
-			$result = $this->stmt->fetch(PDO::FETCH_ASSOC);
+			$stmt = $this->db->prepare($this->query);
+			$stmt->bindValue(':value', $this->whereValue);
+			$stmt->execute();
+
+			$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 			return $result;
 
