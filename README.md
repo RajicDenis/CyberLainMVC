@@ -15,8 +15,8 @@
 ###### Defining routes:
 - Go to routes/web.php
 - A default route to the welcome page is already defined
-- The setErrorPage() function needs to be defined at the end of the file (after all other routes)
-	-- Sets the view to load if the requested route is not defined
+- The setErrorPage() function needs to be defined at the end of the file (after all other routes)  
+	- Sets the view to load if the requested route is not defined
 - There are two ways of defining routes:  
 	**ANONYMOUS FUNCTION**
 ```
@@ -24,12 +24,11 @@
 		require APPROOT .'views/welcome.php';
 	});
 ```
+
 	**CONTROLLER METHOD**
 ```
 	Route::get('/home', 'PageController@index');
 ```
-	--- index is a method defined inside the controller
-
 
 ## MODEL
 ===============================================================  
