@@ -25,23 +25,23 @@ Custom lightweight PHP MVC framework
 
 
 ## MODEL
-	===============================================================  
-	- Create models inside the app/models directory
-	- A default User model is already created 
-	- Every model needs a __construct method that connects to the database
+===============================================================  
+- Create models inside the app/models directory
+- A default User model is already created 
+- Every model needs a __construct method that connects to the database
 
-	```
-	public function __construct() {
+```
+public function __construct() {
 
-		$database = new Database;
-		$this->db = $database->connect();
+	$database = new Database;
+	$this->db = $database->connect();
 
-		return $this->db;
+	return $this->db;
 
-	}
-	```
-	
-	- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
+}
+```
+
+- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
 ## CONTROLLER
