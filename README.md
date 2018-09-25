@@ -24,7 +24,6 @@
 		require APPROOT .'views/welcome.php';
 	});
 ```
-
 	**CONTROLLER METHOD**
 ```
 	Route::get('/home', 'PageController@index');
@@ -137,13 +136,13 @@ public function __construct() {
 
 #### Currently available methods
 
-	```
+```
 	- where()
 	- orderBy()
 	- find()
 	- pluck()
 	- get()
 	- first()
-	```
+```
 
 	
