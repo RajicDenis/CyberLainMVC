@@ -1,15 +1,15 @@
 # CyberLainMVC
 Custom lightweight PHP MVC framework
 
-##CONFIG FILE
-	### Edit the config file to setup the database connection
+## CONFIG FILE
+	###### Edit the config file to setup the database connection
 		- Go to config/Config.php
 		- Define the DB constants to match your database name, user and password
 
 
-##ROUTES
-	===============================================================
-	### Defining routes:
+## ROUTES
+	===============================================================  
+	###### Defining routes:
 		- Go to routes/web.php
 		- A default route to the welcome page is already defined
 		- The setErrorPage() function needs to be defined at the end of the file (after all other routes)
@@ -24,8 +24,8 @@ Custom lightweight PHP MVC framework
 					--- index is a method defined inside the controller
 
 
-##MODEL
-	===============================================================
+## MODEL
+	===============================================================  
 	- Create models inside the app/models directory
 	- A default User model is already created 
 	- Every model needs a __construct method that connects to the database
@@ -42,8 +42,8 @@ Custom lightweight PHP MVC framework
 	- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
-##CONTROLLER
-	===============================================================
+## CONTROLLER
+	===============================================================  
 	- Create controllers inside app/controllers directory
 	- Default UserController is already created
 	- Every controller needs to extend Controller to use the ->model() and ->view() methods
@@ -63,19 +63,19 @@ Custom lightweight PHP MVC framework
 		$user->getAllUsers();
 
 
-##ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
-	===============================================================
-	### First method
+## ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
+	===============================================================  
+	###### First method
 	- $users = $this->model->getAllUsers();
 		
-	### Second method
+	###### Second method
 	- $user = new User;
 	- $users = $user->getAllUsers();
 
 
-##ACCESSING DATABASE
-	===============================================================
-	### Define function to get or manipulate data inside model
+## ACCESSING DATABASE
+	===============================================================  
+	###### Define function to get or manipulate data inside model
 
 	class User {
 		public function getAllUsers() {
@@ -100,7 +100,7 @@ Custom lightweight PHP MVC framework
 		}
 	}
 
-	### From Controller, call model method to manipulate database, then pass data to view
+	###### From Controller, call model method to manipulate database, then pass data to view
 	class UsersController {
 
 		public function index() {
@@ -112,13 +112,13 @@ Custom lightweight PHP MVC framework
 	} 
 
 
-##SIMPLE QUERY BUILDER
-	===============================================================
-	### Conditions 
+## SIMPLE QUERY BUILDER
+	===============================================================  
+	###### Conditions 
 		- You have to define protected $table = <table name> inside the model where you want to use the query builder
 		- You have to extend the Model class (e.g. class User extends Model {})
 
-	### Currently available methods
+	###### Currently available methods
 		- where()
 		- orderBy()
 		- find()
