@@ -1,13 +1,13 @@
 # CyberLainMVC
 Custom lightweight PHP MVC framework
 
-##CONFIG FILE
+## CONFIG FILE
 	### Edit the config file to setup the database connection
 		- Go to config/Config.php
 		- Define the DB constants to match your database name, user and password
 
 
-##ROUTES
+## ROUTES
 	===============================================================
 	### Defining routes:
 		- Go to routes/web.php
@@ -24,7 +24,7 @@ Custom lightweight PHP MVC framework
 					--- index is a method defined inside the controller
 
 
-##MODEL
+## MODEL
 	===============================================================
 	- Create models inside the app/models directory
 	- A default User model is already created 
@@ -42,7 +42,7 @@ Custom lightweight PHP MVC framework
 	- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
-##CONTROLLER
+## CONTROLLER
 	===============================================================
 	- Create controllers inside app/controllers directory
 	- Default UserController is already created
@@ -63,7 +63,7 @@ Custom lightweight PHP MVC framework
 		$user->getAllUsers();
 
 
-##ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
+## ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
 	===============================================================
 	### First method
 	- $users = $this->model->getAllUsers();
@@ -73,7 +73,7 @@ Custom lightweight PHP MVC framework
 	- $users = $user->getAllUsers();
 
 
-##ACCESSING DATABASE
+## ACCESSING DATABASE
 	===============================================================
 	### Define function to get or manipulate data inside model
 
@@ -112,7 +112,7 @@ Custom lightweight PHP MVC framework
 	} 
 
 
-##SIMPLE QUERY BUILDER
+## SIMPLE QUERY BUILDER
 	===============================================================
 	### Conditions 
 		- You have to define protected $table = <table name> inside the model where you want to use the query builder
