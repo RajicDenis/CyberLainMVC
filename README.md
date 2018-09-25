@@ -40,6 +40,7 @@ Custom lightweight PHP MVC framework
 
 	}
 	```
+	
 	- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
