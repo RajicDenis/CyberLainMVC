@@ -16,15 +16,15 @@ Custom lightweight PHP MVC framework
 			-- Sets the view to load if the requested route is not defined
 		- There are two ways of defining routes:
 			-- ANONYMOUS FUNCTION
-			```
+```
 				Route::get('/home', function() {
 					require APPROOT .'views/welcome.php';
 				});
-			```
+```
 			-- CONTROLLER METHOD
-			```
+```
 				Route::get('/home', 'PageController@index');
-			```
+```
 				--- index is a method defined inside the controller
 
 
@@ -66,24 +66,24 @@ public function __construct() {
 	- Inside $this->model() pass the model name (in this example 'User')
 	- To use methods defined in the model, simply use $this->model->method() (e.g. $this->model->getAllUsers())
 	- If you don't want to use $this->model, you can use the alternative method:
-	```
+```
 		$user = new User;
 		$user->getAllUsers();
-	```
+```
 
 ## ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
 	===============================================================  
 	###### First method
 
-	```
+```
 	$users = $this->model->getAllUsers();
-	```
+```
 	###### Second method
 
-	```
+```
 	$user = new User;
 	$users = $user->getAllUsers();
-	```
+```
 
 
 ## ACCESSING DATABASE
