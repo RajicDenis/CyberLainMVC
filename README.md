@@ -30,7 +30,7 @@ Custom lightweight PHP MVC framework
 	- A default User model is already created 
 	- Every model needs a __construct method that connects to the database
 
-	´´´ 
+	```
 	public function __construct() {
 
 		$database = new Database;
@@ -39,7 +39,7 @@ Custom lightweight PHP MVC framework
 		return $this->db;
 
 	}
-	´´´ 
+	```
 	- To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
 
