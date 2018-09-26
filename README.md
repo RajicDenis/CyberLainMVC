@@ -1,4 +1,7 @@
 # **CyberLainMVC** ![](public/images/leaf-icon.png)
+<p align="center"> 
+<img src="public/images/leaf-icon.png">
+</p>
 ==================================================================================  
 ### **Custom lightweight PHP MVC framework**
 ==================================================================================  
