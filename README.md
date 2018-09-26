@@ -77,6 +77,36 @@ _______________________________________________________________
 	$user->getAllUsers();
 ```
 
+**Passing data to view:**
+- The view() method accepts a second parameter which passes data to the view
+```
+$users = $this->model->getAllUsers();
+
+return $this->view('welcome', $users);
+```
+
+==================================================================================
+
+### VIEW
+_______________________________________________________________
+**Accessing the data in the view:**
+- Any data that was passed to the view can be accessed using the $data variable
+- In the next example, the data that was sent is the $users array from the previous example
+```
+<?php foreach($data as $user) { ?>
+	<li><?php echo $user['name']; ?></li>
+<?php } ?>
+```
+- If the passed data is a string:
+**Inside controller:**
+```
+return $this->view('welcome', 'Hello');
+```
+**Inside view:**
+```
+<h2><?php echo $data; ?></h2> // Outputs 'Hello'
+```
+
 ==================================================================================
 
 ### ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
