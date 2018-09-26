@@ -1,7 +1,8 @@
-
+<p align="center">
+	<span><strong>CyberLainMVC</strong></span>
+</p>
 <p align="center"> 
-<h1><strong>CyberLainMVC</strong></h1>
-<img src="public/images/leaf-icon.png">
+	<img src="public/images/leaf-icon.png">
 </p>
 
 ==================================================================================  
