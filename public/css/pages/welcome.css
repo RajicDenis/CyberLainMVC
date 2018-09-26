@@ -1,0 +1,61 @@
+/* Welcome page */
+hr.style-two {
+	position: absolute;
+    border: 0;
+    height: 1px;
+    width: 100%;
+    bottom: -10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #f8f9fa, rgba(0, 0, 0, 0));
+}
+.wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../../images/bg/red.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.wrapper:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(8,8,8,0.4);
+}
+.title {
+	position: absolute;
+	width: 100%;
+    top: 12%;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+.t-box {
+	width: 500px;
+	font-size: 60px;
+	font-family: 'Merienda', sans-serif; 
+	padding: 15px 10px;
+}
+.logo {
+	position: absolute;
+	top: 40px;
+	width: 50px;
+	height: 50px;
+}
+.lspace {
+	padding-left: 30px;
+}
+
+.links {
+	position: absolute;
+	width: 100%;
+    bottom: 170px;
+    text-align: center;
+    z-index: 15;
+}
+.links > a {
+	color: white;
+	font-size: 30px;
+	font-family: 'Kalam', sans-serif; 
+}
