@@ -97,7 +97,7 @@ _______________________________________________________________
 	<li><?php echo $user['name']; ?></li>
 <?php } ?>
 ```
-- If the passed data is a string:
+- If the passed data is a string:  
 **Inside controller:**
 ```
 return $this->view('welcome', 'Hello');
