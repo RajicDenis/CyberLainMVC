@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
 
 	<!-- Load custom css-->
-	<!--<link rel="stylesheet" href="../public/css/main.css">-->
+	<link rel="stylesheet" href="../public/css/main.css">
 </head>
 
 <body>
