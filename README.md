@@ -169,7 +169,7 @@ _______________________________________________________________
 
 ==================================================================================
 
-### SIMPLE QUERY BUILDER
+### SIMPLE DATABASE QUERY BUILDER
 _______________________________________________________________
 #### Conditions 
 	- You have to define protected $table = <table name> inside the model where you want to use the query builder
