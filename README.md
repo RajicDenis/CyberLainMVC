@@ -4,7 +4,7 @@
 </p>
 
 ==================================================================================  
-<h1 align="center"><strong><em>Custom lightweight PHP MVC framework</em></strong></h1>
+<h3 align="center"><strong><em>Custom lightweight PHP MVC framework</em></strong></h3>
 ==================================================================================  
 
 ### CONFIG FILE
