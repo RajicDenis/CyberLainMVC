@@ -25,7 +25,7 @@
 	});
 ```
 
-**CONTROLLER METHOD**
+	**CONTROLLER METHOD**
 ```
 	Route::get('/home', 'PageController@index');
 ```
