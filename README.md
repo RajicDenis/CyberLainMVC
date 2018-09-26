@@ -1,4 +1,4 @@
-# **CyberLainMVC** ![alt text](https://github.com/RajicDenis/CyberLainMVC/master/public/images/leaf.png)
+# **CyberLainMVC** !(https://github.com/RajicDenis/CyberLainMVC/master/public/images/leaf.png)
 ==================================================================================  
 ### **Custom lightweight PHP MVC framework**
 ==================================================================================  
