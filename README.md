@@ -1,5 +1,8 @@
-# **CyberLainMVC** ![](public/images/leaf-icon.png)
+
 <p align="center"> 
+
+# **CyberLainMVC**	
+
 <img src="public/images/leaf-icon.png">
 </p>
 ==================================================================================  
