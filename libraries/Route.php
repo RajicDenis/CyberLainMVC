@@ -11,7 +11,7 @@ spl_autoload_register(function($className) {
 });
 
 
-class Router {
+class Route {
 
 	private static $getUri = [];
 	private static $postUri = [];
@@ -27,9 +27,7 @@ class Router {
 		if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 			self::processRoute($uri, $method, 'GET');
-
 		}
-
 	}
 
 	/**
@@ -43,9 +41,7 @@ class Router {
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			self::processRoute($uri, $method, 'POST');
-
 		}
-
 	}
 
 	/**
@@ -62,7 +58,6 @@ class Router {
 				require APPROOT . '/'. $path .'.php';
 			}
 		}
-
 	}
 
 	/**
@@ -93,7 +88,8 @@ class Router {
 
 				// If POST request, send data to requested method
 				if($requestType == 'GET') {
-					$controller->$function();
+					self::checkController($controller, $function);
+					//$controller->$function();
 				} else {
 					$controller->$function($_POST);
 				}
@@ -106,7 +102,17 @@ class Router {
 
 			die();	
 		}
-
 	}
 
+	private static function checkController($controller, $function) {
+
+		try {
+			
+			$controller->$function();
+
+		} catch(Exception $e) {
+
+			ErrorHandler::sendError($e->getMessage(), true);
+		}
+	}
 }

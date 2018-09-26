@@ -1,15 +1,15 @@
 <?php
 
 // Welcome page
-Router::get('/', 'UserController@index');
+Route::get('/', 'UserController@index');
 
-Router::get('/page', function() {
+Route::get('/page', function() {
 	require APPROOT . '/views/page.php';
 });
 
-Router::get('/about', 'UserController@about');
+Route::get('/about', 'UserController@about');
 
-Router::post('/about', 'UserController@create');
+Route::post('/about', 'UserController@create');
 
 
 /**
@@ -17,7 +17,7 @@ Router::post('/about', 'UserController@create');
  * Has to be called at the end of the file, after all other routes
  * Path is defined without '.php' extension
  */
-Router::setErrorPage('views/error/url');
+Route::setErrorPage('views/error/url');
 
 
 

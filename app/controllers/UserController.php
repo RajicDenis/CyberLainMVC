@@ -21,20 +21,5 @@ class UserController extends Controller {
 
 	}
 
-	public function about() {
-
-		return $this->view('about', $this->model);
-
-	}
-
-	public function create($request) {
-
-		$result = $this->model->addUser($request);
-
-		$message = ['message' => $result];
-
-		return $this->view('welcome', $message);
-
-	}
 
 }

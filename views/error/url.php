@@ -1,7 +1,7 @@
 <?php include APPROOT .'/views/partials/header.php'; ?>
 
 <div class="error-page">
-		
+
 	<div class="err-msg d-flex flex-column align-items-center">
 		<span class="err-txt">4<i class="far fa-frown-open"></i>4</span>
 

@@ -1,3 +1,4 @@
+/* Url not found page */
 .error-page {
 	position: relative;
 	width: 100vw;
@@ -18,4 +19,30 @@
 }
 .fa-frown-open {
 	font-size: 160px;
+}
+
+/* Fatal error page */
+.error-wrap {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../../images/bg/fatal-error.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.err-box {
+	position: relative;
+	margin-top: 200px;
+	color: white;
+	z-index: 10;
+	opacity: 0.8;
+}
+.image-box {
+	padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description {
+	font-family: 'Quattrocento', sans-serif;
 }

@@ -13,6 +13,7 @@
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quattrocento:700" rel="stylesheet">
 
 	<!-- Load custom css-->
 	<link rel="stylesheet" href="../public/css/main.css">

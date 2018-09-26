@@ -1,7 +1,5 @@
 <?php
 
-require_once 'config/Config.php';
-
 spl_autoload_register(function($className) {
 	$file = 'libraries/'. $className .'.php';
 
@@ -9,6 +7,8 @@ spl_autoload_register(function($className) {
 		require_once $file;
 	}
 });
+
+require_once 'routes/web.php';
 
 
 

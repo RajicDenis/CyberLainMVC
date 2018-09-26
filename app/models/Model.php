@@ -71,7 +71,7 @@ class Model {
 			return $result;
 
 		} catch(PDOException $e) {
-			echo $e->getMessage();
+			ErrorHandler::sendError($e->getMessage(), true);
 		}
 
 	}
@@ -139,7 +139,8 @@ class Model {
 				
 
 		} catch(PDOException $e) {
-			echo $e->getMessage();
+
+			ErrorHandler::sendError($e->getMessage(), true);
 		}
 
 	}
@@ -160,7 +161,8 @@ class Model {
 			return $result;
 
 		} catch(PDOException $e) {
-			echo $e->getMessage();
+
+			ErrorHandler::sendError($e->getMessage(), true);
 		}
 
 	}
@@ -181,7 +183,8 @@ class Model {
 			return $result;
 
 		} catch(PDOException $e) {
-			echo $e->getMessage();
+			
+			ErrorHandler::sendError($e->getMessage(), true);
 		}
 
 	}

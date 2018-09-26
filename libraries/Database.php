@@ -9,6 +9,9 @@ class Database {
 
 	public $dbh;
 
+	/**
+	 * Connect to the database
+	 */
 	public function __construct() {
 
 		$dsn = 'mysql:host='. $this->dbhost . ';dbname='. $this->dbname .'';
@@ -25,12 +28,15 @@ class Database {
 
 		} catch (PDOException $e) {
 
-			echo $e->getMessage();
+			ErrorHandler::sendError($e->getMessage(), true);
 
 		}
 
 	}
 
+	/**
+	 * Return database connection
+	 */
 	public function connect() {
 
 		return $this->dbh;
