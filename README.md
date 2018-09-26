@@ -1,6 +1,5 @@
 
 <h1 align="center"><strong>CyberLainMVC</strong></h1>
-
 <hr>
 <p align="center"> 
 	<img src="public/images/leaf-icon.png">
