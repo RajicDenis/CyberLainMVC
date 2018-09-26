@@ -1,10 +1,9 @@
 
 <p align="center"> 
-
-# **CyberLainMVC**	
-
+<h1><strong>CyberLainMVC</strong></h1>
 <img src="public/images/leaf-icon.png">
 </p>
+
 ==================================================================================  
 ### **Custom lightweight PHP MVC framework**
 ==================================================================================  
