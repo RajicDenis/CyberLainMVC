@@ -98,6 +98,7 @@ _______________________________________________________________
 <?php } ?>
 ```
 - If the passed data is a string:  
+
 **Inside controller:**
 ```
 return $this->view('welcome', 'Hello');
