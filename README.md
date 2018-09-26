@@ -4,14 +4,14 @@
 =============================================================== 
 
 ### CONFIG FILE
-===============================================================
+_______________________________________________________________
 #### Edit the config file to setup the database connection
 - Go to config/Config.php
 - Define the DB constants to match your database name, user and password
 
-
+===============================================================
 ### ROUTES	
-===============================================================  
+_______________________________________________________________    
 #### Defining routes:
 - Go to routes/web.php
 - A default route to the welcome page is already defined
