@@ -23,9 +23,10 @@ class ErrorHandler {
 
 		$extraError = self::$extraError;
 
-	    require APPROOT .'/views/error/error.php';
+	    require_once APPROOT .'/views/error/error.php';
 
 	    return true;
+	    die();
 	}
 
 	// Handles fatal errors
@@ -34,9 +35,14 @@ class ErrorHandler {
 	    $error = error_get_last();
 	    $extraError = self::$extraError;
 
-	    require APPROOT .'/views/error/error.php';
+	    require_once APPROOT .'/views/error/error.php';
 	}
 
+	/**
+	 * Redirect to error page with message
+	 * @param string $message error message passed to view
+	 * @param bool $redirect if true, trigger error
+	 */
 	public static function sendError($message, $redirect = false) {
 
 		if($redirect == false) {

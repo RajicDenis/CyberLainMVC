@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Model.php';
-
 class User extends Model {
 
 	protected $table = 'users';
@@ -21,7 +19,7 @@ class User extends Model {
 
 	public function getAllUsers() {
 
-		$user = $this->orderBy('id', 'desc')->get();
+		$user = $this->orderBy('id', 'desc')->first();
 
 		return $user;
 

@@ -8,6 +8,7 @@ spl_autoload_register(function($className) {
 	}
 });
 
+require_once 'app/models/Model.php';
 require_once 'routes/web.php';
 
 

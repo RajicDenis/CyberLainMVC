@@ -86,7 +86,7 @@ _______________________________________________________________
 ```
 $users = $this->model->getAllUsers();
 
-return $this->view('welcome', $users);
+return $this->view('welcome', ['allUsers', $users]);
 ```
 
 ==================================================================================
@@ -94,10 +94,10 @@ return $this->view('welcome', $users);
 ### VIEW
 _______________________________________________________________
 **Accessing the data in the view:**
-- Any data that was passed to the view can be accessed using the $data variable
-- In the next example, the data that was sent is the $users array from the previous example
+- Any data that was passed to the view can be accessed using the variable name you defined in the view() method
+- In the next example, the data that was sent is the $users (accessed through $allUsers) array from the previous example
 ```
-<?php foreach($data as $user) { ?>
+<?php foreach($allUsers as $user) { ?>
 	<li><?php echo $user['name']; ?></li>
 <?php } ?>
 ```

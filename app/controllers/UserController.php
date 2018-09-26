@@ -17,9 +17,8 @@ class UserController extends Controller {
 
 		$users = $this->model->getAllUsers();
 
-		return $this->view('welcome', $users);
+		return $this->view('welcome', ['id', 'Test']);
 
 	}
-
 
 }

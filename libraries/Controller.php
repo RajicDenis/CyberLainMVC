@@ -28,8 +28,17 @@ class Controller {
 	public function view($view, $data = []) {
 
 		if(file_exists(APPROOT . '/views/' . $view . '.php')) {
+			if(empty($data[0]) == false && !empty($data[1])) {
 
-			require APPROOT . '/views/' . $view . '.php';
+				$name = $data[0];
+				$$name = $data[1];
+
+				require APPROOT . '/views/' . $view . '.php';
+
+			} else {
+				
+				ErrorHandler::sendError("Incorrect data format in view() method, use an array to pass the data", true);
+			}
 
 		} else {
 

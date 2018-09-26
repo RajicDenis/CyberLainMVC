@@ -29,6 +29,7 @@
 	background-image: url('../../images/bg/fatal-error.jpg');
 	background-size: cover;
 	background-position: center;
+	z-index: 100;
 }
 .err-box {
 	position: relative;
