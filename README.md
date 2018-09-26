@@ -1,7 +1,7 @@
 # **CyberLainMVC**
-===========================================================================  
+=====================================================================================  
 ### **Custom lightweight PHP MVC framework**
-===========================================================================  
+=====================================================================================  
 
 ### CONFIG FILE
 _______________________________________________________________
@@ -9,7 +9,7 @@ _______________________________________________________________
 - Go to config/Config.php
 - Define the DB constants to match your database name, user and password
 
-===========================================================================  
+=====================================================================================  
 ### ROUTES	
 _______________________________________________________________    
 #### Defining routes:
@@ -31,8 +31,10 @@ _______________________________________________________________
 	Route::get('/home', 'PageController@index');
 ```
 
+=====================================================================================  
+
 ### MODEL
-===============================================================  
+_______________________________________________________________
 - Create models inside the app/models directory
 - A default User model is already created 
 - Every model needs a construct method that connects to the database
@@ -50,9 +52,10 @@ public function __construct() {
 
 - To use the simple query builder, you need to extend the Model class (e.g. class User extends Model {})
 
+=====================================================================================
 
 ### CONTROLLER
-===============================================================  
+_______________________________________________________________
 - Create controllers inside app/controllers directory
 - Default UserController is already created
 - Every controller needs to extend Controller to use the ->model() and ->view() methods
@@ -74,8 +77,10 @@ public function __construct() {
 	$user->getAllUsers();
 ```
 
+=====================================================================================
+
 ### ACCESSING MODEL METHODS AND PROPERTIES FROM CONTROLLER
-===============================================================  
+_______________________________________________________________
 #### First method
 
 ```
@@ -88,9 +93,10 @@ public function __construct() {
 	$users = $user->getAllUsers();
 ```
 
+=====================================================================================
 
 ### ACCESSING DATABASE
-===============================================================  
+_______________________________________________________________
 #### Define function to get or manipulate data inside model
 
 ```
@@ -130,8 +136,10 @@ public function __construct() {
 	} 
 ```
 
+=====================================================================================
+
 ### SIMPLE QUERY BUILDER
-===============================================================  
+_______________________________________________________________
 #### Conditions 
 	- You have to define protected $table = <table name> inside the model where you want to use the query builder
 	- You have to extend the Model class (e.g. class User extends Model {})
