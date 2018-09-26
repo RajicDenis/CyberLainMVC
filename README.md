@@ -18,13 +18,14 @@
 - The setErrorPage() function needs to be defined at the end of the file (after all other routes)  
 	- Sets the view to load if the requested route is not defined
 - There are two ways of defining routes:  
-	**ANONYMOUS FUNCTION**
+**ANONYMOUS FUNCTION**
 ```
 	Route::get('/home', function() {
 		require APPROOT .'views/welcome.php';
 	});
 ```
-	**CONTROLLER METHOD**
+
+**CONTROLLER METHOD**
 ```
 	Route::get('/home', 'PageController@index');
 ```
@@ -137,12 +138,12 @@ public function __construct() {
 #### Currently available methods
 
 ```
-	- where()
-	- orderBy()
-	- find()
-	- pluck()
-	- get()
-	- first()
+- where()
+- orderBy()
+- find()
+- pluck()
+- get()
+- first()
 ```
 
 	
