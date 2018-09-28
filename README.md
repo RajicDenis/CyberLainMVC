@@ -44,7 +44,6 @@ _______________________________________________________________
 ### MODEL
 _______________________________________________________________
 - Create models inside the app/models directory
-- A default User model is already created 
 - Every model needs a construct method that connects to the database
 
 ```
@@ -65,7 +64,7 @@ public function __construct() {
 ### CONTROLLER
 _______________________________________________________________
 - Create controllers inside app/controllers directory
-- Default UserController is already created
+- Default HomeController is already created
 - Every controller needs to extend Controller to use the ->model() and ->view() methods
 - To use the model and its methods inside the controller, you can require and instantiate
   the model using a construct method:
