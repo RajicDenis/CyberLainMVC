@@ -7,7 +7,6 @@
 <h3 align="center"><strong><em>Custom lightweight PHP MVC framework</em></strong></h3>
 ==================================================================================  
 
-
 [![GitHub issues](https://img.shields.io/github/issues/RajicDenis/CyberLainMVC.svg)](https://github.com/RajicDenis/CyberLainMVC/issues)
 [![GitHub stars](https://img.shields.io/github/stars/RajicDenis/CyberLainMVC.svg)](https://github.com/RajicDenis/CyberLainMVC/stargazers)
 

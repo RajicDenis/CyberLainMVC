@@ -1,15 +1,12 @@
 <?php
 
 // Welcome page
-Route::get('/', 'UserController@index');
+Route::get('/', 'HomeController@index');
 
-Route::get('/page', function() {
-	require APPROOT . '/views/page.php';
-});
+/**
+  * Define your routes here 
+  */ 
 
-Route::get('/about', 'UserController@about');
-
-Route::post('/about', 'UserController@create');
 
 
 /**
