@@ -1,5 +1,6 @@
 <?php
 
+// Autoload libraries
 spl_autoload_register(function($className) {
 	$file = 'libraries/'. $className .'.php';
 
